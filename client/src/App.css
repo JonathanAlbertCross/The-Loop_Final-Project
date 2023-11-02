@@ -1,0 +1,20 @@
+* {
+  background-color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+
+.containerFrom {
+  padding: 2rem;
+  background-color: rgb(180, 78, 78);
+}
+
+.containerTo {
+  padding: 2rem;
+  margin: 2rem;
+  background-color: black;
+}
+
+button {
+  padding: 2rem;
+}

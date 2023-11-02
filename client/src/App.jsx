@@ -1,30 +1,47 @@
 import "./App.css";
+import { useState } from "react";
+import axios from "axios";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [from, setForm] = useState("en");
+  const [to, setTo] = useState("fr");
+
+  const [word, setWord] = useState("");
+  const [translation, setTranslation] = useState({});
+
+  async function handleTranslate(event) {
+    event.preventDefault();
+    const API = `http://localhost:8080/translate?word=${word}&from=${from}&to=${to}`;
+    const res = await axios.get(API);
+    setTranslation(res.data);
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <form onSubmit={handleTranslate}>
+        <div className="containerFrom">
+          <select onChange={(event) => setFrom(event.target.value)}>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="es">Espagnol</option>
+          </select>
+          <input
+            placeholder="Translate"
+            onChange={(event) => setWord(event.target.value)}
+          />
+        </div>
+      </form>
+      <form>
+        <div className="containerTo">
+          <select onChange={(event) => setTo(event.target.value)}>
+            <option value="fr">Français</option>
+            <option value="es">Espagnol</option>
+            <option value="en">English</option>
+          </select>
+          <div className="output">{translation.translation}</div>
+        </div>
+        <button>Submit</button>
+      </form>
     </>
   );
 }
