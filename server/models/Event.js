@@ -3,17 +3,18 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const eventSchema = new Schema({
-  name: String,
-  location: String,
-  eventTitle: String,
-  dateAndTime: Number,
-  duration: Number,
-  description: String,
-  filterTags: String,
-  picture: String,
-  socialMedia: String,
-  ticketPrice: Number,
-  ticketQuantity: Number,
+  OrganizerName: String,
+  Name: String,
+  Location: String,
+  EventTitle: String,
+  DateTime: String,
+  Duration: String,
+  Description: String,
+  FilterTags: Array,
+  PictureOptionUpload: String,
+  SocialMediaLink: String,
+  TicketPrice: Number,
+  QuantityTickets: Number,
 });
 
 const Event = mongoose.model("Event", eventSchema);

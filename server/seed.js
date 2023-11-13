@@ -279,7 +279,7 @@ async function seed() {
     },
   ]);
 
-  console.log("Movie created");
+  console.log("Event created");
   mongoose.disconnect();
 }
 

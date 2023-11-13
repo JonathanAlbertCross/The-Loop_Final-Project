@@ -25,7 +25,6 @@ app.get("/", (_, response) => {
 app.get("/events", async (request, response) => {
   const event = await Event.find(request.query);
   response.json(event);
-  console.log(event);
 });
 
 app.listen(PORT, () => console.log(`App is running PORT ${PORT}`));
