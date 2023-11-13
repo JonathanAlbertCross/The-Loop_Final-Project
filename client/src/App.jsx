@@ -1,49 +1,32 @@
-import "./App.css";
-import { useState } from "react";
 import axios from "axios";
+import { useState, useEffect } from "react";
+import "./App.css";
+import Home from "./pages/home";
+import Events from "./pages/events";
+import About from "./pages/about";
 
-function App() {
-  const [from, setForm] = useState("en");
-  const [to, setTo] = useState("fr");
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-  const [word, setWord] = useState("");
-  const [translation, setTranslation] = useState({});
-
-  async function handleTranslate(event) {
-    event.preventDefault();
-    const API = `http://localhost:8080/translate?word=${word}&from=${from}&to=${to}`;
-    const res = await axios.get(API);
-    setTranslation(res.data);
-  }
-
+export default function App() {
   return (
-    <>
-      <form onSubmit={handleTranslate}>
-        <div className="containerFrom">
-          <select onChange={(event) => setFrom(event.target.value)}>
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="es">Espagnol</option>
-          </select>
-          <input
-            placeholder="Translate"
-            onChange={(event) => setWord(event.target.value)}
-          />
-        </div>
-      </form>
-      <form>
-        <div className="containerTo">
-          <select onChange={(event) => setTo(event.target.value)}>
-            <option value="fr">Français</option>
-            <option value="es">Espagnol</option>
-            <option value="en">English</option>
-          </select>
-          <div className="output">{translation.translation}</div>
-        </div>
-        <button>Submit</button>
-      </form>
-    </>
+    <BrowserRouter>
+      <header>
+        <h1>The loop</h1>
+        <nav>
+          <ul>
+            <Link to="/">Home</Link>
+            <Link to="/Events">Events</Link>
+            <Link to="/About">About</Link>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/Events" element={<Events />}></Route>
+          <Route path="/About" element={<About />}></Route>
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
-
-export default App;
