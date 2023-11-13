@@ -8,11 +8,11 @@ const axios = require("axios");
 
 // add your endpoints here
 
-app.get("/", (_, response) => response.json("Root route for translateApp."));
+app.get("/", (_, response) => response.json("Root route for The Loop App."));
 
 app.get("/translate", async (request, response) => {
   const { word, from, to } = request.query;
-  const API = `https://api.mymemory.translated.net/get?q=${word}&langpair=${from}|${to}`;
+  const API = `https://www.eventbriteapi.com/v3/users/me/?token=KOPS6OWTRFTOGU4A3MVA``https://api.mymemory.translated.net/get?q=${word}&langpair=${from}|${to}`;
   const res = await axios.get(API);
   const wrangledData = {
     translation: res.data.responseData.translatedText,
