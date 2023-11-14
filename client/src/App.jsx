@@ -11,12 +11,18 @@ export default function App() {
   return (
     <BrowserRouter>
       <header>
-        <h1>The loop</h1>
+        <h1>The Loop</h1>
         <nav>
           <ul>
-            <Link to="/">Home</Link>
-            <Link to="/Events">Events</Link>
-            <Link to="/About">About</Link>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/Events">Events</Link>
+            </li>
+            <li>
+              <Link to="/About">About</Link>
+            </li>
           </ul>
         </nav>
       </header>
