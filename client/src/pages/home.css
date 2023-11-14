@@ -1,0 +1,79 @@
+* {
+  background-color: #afd0bf;
+  font-family: logo-font;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: logo-font;
+  src: url(/fonts/Agbalumo-Regular.ttf) format("truetype");
+}
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+img {
+  width: 575px;
+  height: 400px;
+  position: relative;
+  padding: 20px;
+  margin-left: 200px;
+  margin-top: 70px;
+}
+
+.home-section-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 50px;
+  height: 100vh;
+}
+
+.quotes {
+  font-size: 3.5rem;
+  color: #e2efde;
+  padding: 30px;
+  background-color: transparent;
+}
+
+.h2-1 {
+  margin-left: 120px;
+}
+
+.h2-2 {
+  margin-left: 250px;
+}
+
+.red-text {
+  color: #bd8b9c;
+  text-decoration: underline;
+}
+
+.green-text {
+  color: #7b9674;
+  text-decoration: underline;
+}
+
+h3 {
+  width: 80%;
+  color: #e2efde;
+}
+
+.home-section-2 {
+  height: 150vh;
+  background-color: #bd8b9c;
+  margin: 0;
+}
+
+.home-section-3 {
+  height: 150vh;
+  background-color: #e2efde;
+  margin: 0;
+}
+
+.svg1 {
+  background-color: #bd8b9c;
+}
