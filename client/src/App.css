@@ -1,21 +1,32 @@
 * {
-  background-color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1rem;
+  background-color: #afd0bf;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.containerFrom {
-  padding: 2rem;
-  background-color: rgb(180, 78, 78);
+@font-face {
+  font-family: logo-font;
+  src: url(../public/fonts/Agbalumo-Regular.ttf) format("truetype");
+}
+header {
+  font-family: "logo-font";
+  color: #e2efde;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 3rem;
 }
 
-.containerTo {
-  padding: 2rem;
-  margin: 2rem;
-  background-color: black;
-  color: white;
+header > h1 {
+  font-size: 3rem;
 }
 
-button {
-  padding: 2rem;
+header > nav > ul {
+  font-size: 1.25rem;
+  display: flex;
+}
+
+header > nav > ul > li {
+  margin-right: 65px;
+  margin-top: 13px;
 }
