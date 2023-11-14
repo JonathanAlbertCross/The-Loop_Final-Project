@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function Form({ events, setEvents }) {
-  const [formData, seFormData] = useState({
+  const [formData, setFormData] = useState({
     OrganizerName: "",
     Name: "",
     Location: "",
@@ -27,9 +27,10 @@ export default function Form({ events, setEvents }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const API = "https://the-loop.onrender.com";
+    const API = "http://localhost/8080";
+    // const API = "https://the-loop.onrender.com";
     const res = await axios.post(API, formData);
-    setBooks([...events, res.data]);
+    setEvents([...events, res.data]);
   }
 
   return (
