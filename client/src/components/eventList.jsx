@@ -1,18 +1,41 @@
-import Book from "./events";
+import Event from "./Event";
 
-export default function BestBooks({ books }) {
-  return books ? (
-    books.map(({ _id, title, description, status }) => {
-      return (
-        <Book
-          key={_id}
-          title={title}
-          description={description}
-          status={status}
-        />
-      );
-    })
+export default function EventList({ event }) {
+  return event ? (
+    event.map(
+      ({
+        OrganizerName,
+        Name,
+        Location,
+        EventTitle,
+        DateTime,
+        Duration,
+        Description,
+        FilterTags,
+        PictureOptionUpload,
+        SocialMediaLink,
+        TicketPrice,
+        QuantityTickets,
+      }) => {
+        return (
+          <Event
+            OrganizerName={OrganizerName}
+            Name={Name}
+            Location={Location}
+            EventTitle={EventTitle}
+            DateTime={DateTime}
+            Duration={Duration}
+            Description={Description}
+            FilterTags={FilterTags}
+            PictureOptionUpload={PictureOptionUpload}
+            SocialMediaLink={SocialMediaLink}
+            TicketPrice={TicketPrice}
+            QuantityTickets={QuantityTickets}
+          />
+        );
+      }
+    )
   ) : (
-    <p>No books found.</p>
+    <p>No events found.</p>
   );
 }
