@@ -13,8 +13,8 @@ export default function Form({ events, setEvents }) {
     FilterTags: [""],
     PictureOptionUpload: "",
     SocialMediaLink: "",
-    TicketPrice: 20.0,
-    QuantityTickets: 200,
+    TicketPrice: [],
+    QuantityTickets: [],
   });
 
   function handleChange(event) {
@@ -27,7 +27,7 @@ export default function Form({ events, setEvents }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const API = "http://localhost/8080";
+    const API = "http://localhost:8080/events";
     // const API = "https://the-loop.onrender.com";
     const res = await axios.post(API, formData);
     setEvents([...events, res.data]);
