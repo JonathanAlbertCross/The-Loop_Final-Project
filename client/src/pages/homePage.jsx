@@ -41,4 +41,6 @@ export default function Home() {
           ></path>
         </svg>
       </div>
-
+    </div>
+  );
+}
