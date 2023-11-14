@@ -17,14 +17,6 @@ mongoose.connect(MONGO_URL);
 
 const data = require("./events.json");
 
-// add your endpoints here
-app.get("/", (_, response) => {
-  response.json("Root");
-});
-
-app.get("/events", async (request, response) => {
-  const event = await Event.find(request.query);
-  response.json(event);
 });
 
 app.listen(PORT, () => console.log(`App is running PORT ${PORT}`));
