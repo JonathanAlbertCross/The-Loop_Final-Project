@@ -23,7 +23,7 @@ export default function App() {
       {isAuthenticated && (
         <div>
           <Profile />
-          <LoginButton />
+          <LogoutButton />
         </div>
       )}
       <BrowserRouter>
