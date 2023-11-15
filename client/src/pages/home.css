@@ -3,6 +3,7 @@
   font-family: logo-font;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -63,7 +64,7 @@ h3 {
 }
 
 .home-section-2 {
-  height: 150vh;
+  height: 250vh;
   background-color: #bd8b9c;
   margin: 0;
 }
@@ -76,4 +77,29 @@ h3 {
 
 .svg1 {
   background-color: #bd8b9c;
+}
+
+.item {
+  background-color: #e2efde;
+  border: 2px solid black;
+}
+
+.container {
+  background-color: #bd8b9c;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.column {
+  background-color: #bd8b9c;
+  padding: 1rem 0;
+  flex: 1;
+  text-align: center;
+  height: 400px;
 }
