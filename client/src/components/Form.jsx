@@ -43,9 +43,9 @@ export default function Form({ events, setEvents }) {
   }
 
   return (
-    <form onSubmit={events?.title ? updateEvent : addEvents}>
+    <form onSubmit={addEvents}>
       <fieldset>
-        <legend>{events?.title ? "Update " : "Add "}Events</legend>
+        <legend> Add Event </legend>
         <label htmlFor="organizerName">
           Your Name:
           <input
@@ -105,7 +105,7 @@ export default function Form({ events, setEvents }) {
           Description:
           <input
             id="Description"
-            name=" Description"
+            name="Description"
             type="text"
             onChange={handleChange}
             value={formData.Description}
@@ -115,7 +115,7 @@ export default function Form({ events, setEvents }) {
           Tags:
           <input
             id="FilterTags"
-            name=" FilterTags"
+            name="FilterTags"
             type="text"
             onChange={handleChange}
             value={formData.FilterTags}
