@@ -111,21 +111,50 @@ export default function Form({ events, setEvents }) {
           value={formData.Description}
         />
       </label>
-      <label htmlFor="FilterTags">
-        Tags:
-        <select
-          id="FilterTags"
-          name="FilterTags"
-          onChange={handleChange}
-          value={formData.FilterTags}
-        >
-          <option value="">Select a tag</option>
-          <option value="LGBT">LGBT</option>
-          <option value="women">Women</option>
-          <option value="disabled">Disabled</option>
-          <option value="other">Other</option>
-        </select>
-      </label>
+      <div>
+        <label>Tags:</label>
+        <div>
+          <input
+            type="checkbox"
+            id="LGBT"
+            name="LGBT"
+            onChange={handleChange}
+            checked={formData.LGBT}
+          />
+          <label htmlFor="LGBT">LGBT</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="women"
+            name="women"
+            onChange={handleChange}
+            checked={formData.women}
+          />
+          <label htmlFor="women">Women</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="disabled"
+            name="disabled"
+            onChange={handleChange}
+            checked={formData.disabled}
+          />
+          <label htmlFor="disabled">Disabled</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="other"
+            name="other"
+            onChange={handleChange}
+            checked={formData.other}
+          />
+          <label htmlFor="other">Other</label>
+        </div>
+      </div>
+
       <label htmlFor="PictureOptionUpload">
         Picture:
         <input
