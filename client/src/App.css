@@ -7,12 +7,29 @@
   font-family: logo-font;
   src: url(/fonts/Agbalumo-Regular.ttf) format("truetype");
 }
+
 header {
+  margin: 0;
+  padding: 0;
   font-family: "logo-font";
   color: #e2efde;
   display: flex;
   justify-content: space-between;
   font-size: 3rem;
+  padding: 10px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+header.authenticated-header {
+  display: flex;
+}
+
+header > nav {
+  display: flex;
+  width: 100%;
+  margin-left: 550px;
+  height: 50px;
 }
 
 header > h1 {
@@ -20,7 +37,6 @@ header > h1 {
   margin-top: 10px;
   margin-left: 50px;
 }
-
 .underline {
   text-decoration: none;
   display: inline-block;
@@ -29,6 +45,9 @@ header > h1 {
   padding-bottom: 5px;
 }
 
+h1 {
+  width: 300px;
+}
 h1 > a {
   text-decoration: none;
   color: #e2efde;
@@ -44,6 +63,8 @@ header > nav > ul > li {
   color: #e2efde;
   margin-right: 65px;
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 header > nav > ul > li > a {
@@ -61,6 +82,30 @@ header > nav > ul > li > a:active {
   color: #1e4912;
 }
 
+div.profile {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  margin-right: 220px;
+}
+
+img.profile-picture {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  padding: 20px;
+}
+div.profile-info {
+  display: flex;
+  margin-right: 30px;
+  width: 300px;
+  margin-top: 17px;
+}
+
+p.profile-welcome {
+  width: 400px;
+}
+
 button {
   color: #e2efde;
   padding: 2px 15px;
@@ -71,6 +116,8 @@ button {
   border-radius: 15px;
   border: #7b9674 2px solid;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  width: 150px;
 }
 
 button:hover {

@@ -15,6 +15,7 @@ export default function Home() {
           </h2>
         </div>
         <img
+          className="social-media"
           src="../public/imgs/social-media.png"
           alt="Diverse Social Media Circle"
         />
