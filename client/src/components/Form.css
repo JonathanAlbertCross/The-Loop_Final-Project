@@ -36,3 +36,11 @@ label > input,
 label > select {
   margin-left: 5px;
 }
+
+.picture-label {
+  margin-left: 85px;
+}
+
+.add-event-button {
+  margin-top: 20px;
+}

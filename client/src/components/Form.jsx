@@ -196,7 +196,7 @@ export default function Form({ events, setEvents }) {
           value={formData.QuantityTickets}
         />
       </label>
-      <button>Add Event</button>
+      <button className="add-event-button">Add Event</button>
     </form>
   );
 }
