@@ -1,43 +1,47 @@
+import React from "react";
 import Event from "./Event";
+import "./EventList.css";
 
 export default function EventList({ event }) {
   return event ? (
-    event.map(
-      ({
-        _id,
-        OrganizerName,
-        Name,
-        Location,
-        EventTitle,
-        DateTime,
-        Duration,
-        Description,
-        FilterTags,
-        PictureOptionUpload,
-        SocialMediaLink,
-        TicketPrice,
-        QuantityTickets,
-      }) => {
-        return (
-          <Event
-            id={_id}
-            OrganizerName={OrganizerName}
-            Name={Name}
-            Location={Location}
-            EventTitle={EventTitle}
-            DateTime={DateTime}
-            Duration={Duration}
-            Description={Description}
-            FilterTags={FilterTags}
-            PictureOptionUpload={PictureOptionUpload}
-            SocialMediaLink={SocialMediaLink}
-            TicketPrice={TicketPrice}
-            QuantityTickets={QuantityTickets}
-          />
-        );
-      }
-    )
+    <div className="event-list">
+      {event.map(
+        ({
+          _id,
+          OrganizerName,
+          Name,
+          Location,
+          EventTitle,
+          DateTime,
+          Duration,
+          Description,
+          FilterTags,
+          PictureOptionUpload,
+          SocialMediaLink,
+          TicketPrice,
+          QuantityTickets,
+        }) => {
+          return (
+            <Event
+              key={_id}
+              OrganizerName={OrganizerName}
+              Name={Name}
+              Location={Location}
+              EventTitle={EventTitle}
+              DateTime={DateTime}
+              Duration={Duration}
+              Description={Description}
+              FilterTags={FilterTags}
+              PictureOptionUpload={PictureOptionUpload}
+              SocialMediaLink={SocialMediaLink}
+              TicketPrice={TicketPrice}
+              QuantityTickets={QuantityTickets}
+            />
+          );
+        }
+      )}
+    </div>
   ) : (
-    <p>No events found.</p>
+    <p className="no-events">No events found.</p>
   );
 }

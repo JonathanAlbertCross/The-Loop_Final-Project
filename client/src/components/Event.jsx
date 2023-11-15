@@ -1,3 +1,5 @@
+import "./eventList.css";
+
 export default function Event({
   OrganizerName,
   Name,
@@ -13,19 +15,21 @@ export default function Event({
   QuantityTickets,
 }) {
   return (
-    <article>
-      <h2>{OrganizerName}</h2>
-      <h2>@ {Name}</h2>
-      <p>Location: {Location}</p>
+    <article className="eventCard">
+      <h2>{Name}</h2>
+      <h3>{OrganizerName}</h3>
+      <p>
+        Location: <strong>{Location}</strong>
+      </p>
       <p>Event Title: {EventTitle}</p>
       <p>Date and Time: {DateTime}</p>
       <p>Duration: {Duration}</p>
       <p>Description: {Description}</p>
       <p>Tags: {FilterTags}</p>
-      <p>Picture: {PictureOptionUpload}</p>
+
       <p>Social: {SocialMediaLink}</p>
-      <p>Price: {TicketPrice}</p>
-      <p>Quantity: {QuantityTickets}</p>
+      <p>Price: £{TicketPrice}</p>
+      <p>Quantity: {QuantityTickets} places</p>
     </article>
   );
 }
