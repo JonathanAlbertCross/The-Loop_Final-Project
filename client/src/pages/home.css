@@ -25,6 +25,25 @@ img.social-media {
   margin-top: 70px;
 }
 
+.profile {
+  text-align: left;
+  padding: 10px;
+  display: block;
+  justify-content: center;
+}
+
+.profilePic {
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h3 {
+  margin: 0;
+  color: #333;
+}
+
 .home-section-1 {
   display: flex;
   justify-content: space-between;
