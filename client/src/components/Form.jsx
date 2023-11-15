@@ -45,7 +45,7 @@ export default function Form({ events, setEvents }) {
   }
 
   return (
-    <form onSubmit={events?.title ? updateEvent : addEvents}>
+    <form onSubmit={addEvents}>
       <label htmlFor="organizerName">
         Your Name:
         <input
