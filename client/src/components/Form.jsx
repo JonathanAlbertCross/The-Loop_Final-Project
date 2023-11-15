@@ -25,7 +25,7 @@ export default function Form({ events, setEvents }) {
     }
   }
 
-  async function handleSubmit(event) {
+  async function addEvents(event) {
     event.preventDefault();
     const API = "http://localhost:8080/events";
     // const API = "https://the-loop.onrender.com";
@@ -33,76 +33,136 @@ export default function Form({ events, setEvents }) {
     setEvents([...events, res.data]);
   }
 
+  async function updateEvent(event) {
+    event.preventDefault();
+    const API = "http://localhost:8080/events";
+    // const API = "https://the-loop.onrender.com";
+    const res = await axios.post(API, formData);
+    setEvents(formData);
+  }
+
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
-      <input
-        name=" OrganizerName"
-        placeholder="Your Name"
-        onChange={(e) => handleChange(e)}
-      />
-      <input
-        name="Name"
-        placeholder="Group Name"
-        onChange={(e) => handleChange(e)}
-      />
-      <input
-        name=" Location"
-        placeholder="Your Location"
-        onChange={(e) => handleChange(e)}
-      />
-      <input
-        name=" EventTitle"
-        placeholder="Title"
-        onChange={(e) => handleChange(e)}
-      />
-      <input
-        name="DateTime"
-        type="date"
-        placeholder="Date and Time"
-        onChange={(e) => handleChange(e)}
-      />
-      <input
-        name="Duration"
-        placeholder="Duration"
-        onChange={(e) => handleChange(e)}
-      />
-      <input
-        name=" Description"
-        placeholder="Description"
-        onChange={(e) => handleChange(e)}
-      />
-      <input
-        name=" FilterTags"
-        placeholder="Filter"
-        onChange={(e) => handleChange(e)}
-      />
-      <input
-        name="PictureOptionUpload"
-        type="image"
-        placeholder="Upload Image"
-        onChange={(e) => handleChange(e)}
-      />
-      <input
-        name="SocialMediaLink"
-        placeholder="Link to social media"
-        onChange={(e) => handleChange(e)}
-      />
-      <input
-        name="TicketPrice"
-        type="number"
-        min="1"
-        step="any"
-        placeholder="Link to social media"
-        onChange={(e) => handleChange(e)}
-      />
-      <input
-        name="QuantityTickets"
-        type="number"
-        placeholder="Quantity"
-        onChange={(e) => handleChange(e)}
-      />
-      <input name="status" type="checkbox" onChange={(e) => handleChange(e)} />
-      <button>Add Event</button>
+    <form onSubmit={events?.title ? updateEvent : addEvents}>
+      <fieldset>
+        <legend>{events?.title ? "Update " : "Add "}Events</legend>
+        <label htmlFor="organizerName">
+          Your Name:
+          <input
+            id=" OrganizerName"
+            name=" OrganizerName"
+            type="text"
+            onChange={handleChange}
+            value={formData.OrganizerName}
+          />
+        </label>
+        <label htmlFor="name">
+          Group Name:
+          <input
+            id="Name"
+            name="Name"
+            onChange={handleChange}
+            value={formData.Name}
+          />
+        </label>
+        <label htmlFor="location">
+          Location:
+          <input
+            id=" Location"
+            name=" Location"
+            onChange={handleChange}
+            value={formData.Location}
+          />
+        </label>
+        <label htmlFor="title">
+          Event Title:
+          <input
+            id=" EventTitle"
+            name=" EventTitle"
+            onChange={handleChange}
+            value={formData.EventTitle}
+          />
+        </label>
+        <label htmlFor="dateAndTime">
+          Date and Time:
+          <input
+            name="DateTime"
+            type="date"
+            onChange={handleChange}
+            value={formData.DateTime}
+          />
+        </label>
+        <label htmlFor="duration">
+          Duration:
+          <input
+            id="Duration"
+            name="Duration"
+            onChange={handleChange}
+            value={formData.Duration}
+          />
+        </label>
+        <label htmlFor="description">
+          Description:
+          <input
+            id="Description"
+            name=" Description"
+            type="text"
+            onChange={handleChange}
+            value={formData.Description}
+          />
+        </label>
+        <label htmlFor="filterTags">
+          Tags:
+          <input
+            id="FilterTags"
+            name=" FilterTags"
+            type="text"
+            onChange={handleChange}
+            value={formData.FilterTags}
+          />
+        </label>
+        <label htmlFor="pictureOptionUpload">
+          Picture:
+          <input
+            id="PictureOptionUpload"
+            name="PictureOptionUpload"
+            type="image"
+            onChange={handleChange}
+            value={formData.PictureOptionUpload}
+          />
+        </label>
+        <label htmlFor="socialMediaLink">
+          Socials:
+          <input
+            id="SocialMediaLink"
+            name="SocialMediaLink"
+            onChange={handleChange}
+            value={formData.SocialMediaLink}
+          />
+        </label>
+        <label htmlFor="ticketPrice">
+          Price:
+          <input
+            id="TicketPrice"
+            name="TicketPrice"
+            type="number"
+            min="1"
+            step="any"
+            onChange={handleChange}
+            value={formData.TicketPrice}
+          />
+        </label>
+        <label htmlFor="quantityTickets">
+          Quantity:
+          <input
+            id="QuantityTickets"
+            name="QuantityTickets"
+            type="number"
+            onChange={handleChange}
+            value={formData.QuantityTickets}
+          />
+        </label>
+        <button>Add Event</button>
+      </fieldset>
     </form>
   );
 }

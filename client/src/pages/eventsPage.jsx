@@ -9,7 +9,7 @@ export default function EventsPage() {
 
   async function getEvents() {
     const API = "http://localhost:8080/events";
-    // const API = "https://the-loop.onrender.com";
+    // const API = 'https://the-loop.onrender.com/events?_id=${params.id}`;
     const res = await axios.get(API);
     setEvents(res.data);
   }

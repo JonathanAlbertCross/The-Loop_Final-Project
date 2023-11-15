@@ -4,6 +4,7 @@ export default function EventList({ event }) {
   return event ? (
     event.map(
       ({
+        _id,
         OrganizerName,
         Name,
         Location,
@@ -19,6 +20,7 @@ export default function EventList({ event }) {
       }) => {
         return (
           <Event
+            id={_id}
             OrganizerName={OrganizerName}
             Name={Name}
             Location={Location}
