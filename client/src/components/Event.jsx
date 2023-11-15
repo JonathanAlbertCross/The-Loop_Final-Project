@@ -15,7 +15,7 @@ export default function Event({
   return (
     <article>
       <h2>{OrganizerName}</h2>
-      <h2>Company: {Name}</h2>
+      <h2>@ {Name}</h2>
       <p>Location: {Location}</p>
       <p>Event Title: {EventTitle}</p>
       <p>Date and Time: {DateTime}</p>
