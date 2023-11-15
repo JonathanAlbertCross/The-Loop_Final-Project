@@ -46,7 +46,7 @@ export default function Form({ events, setEvents }) {
 
   return (
     <form onSubmit={addEvents}>
-      <label htmlFor="organizerName">
+      <label htmlFor="OrganizerName">
         Your Name:
         <input
           id="OrganizerName"
@@ -56,7 +56,7 @@ export default function Form({ events, setEvents }) {
           value={formData.OrganizerName}
         />
       </label>
-      <label htmlFor="name">
+      <label htmlFor="Name">
         Group Name:
         <input
           id="Name"
@@ -65,7 +65,7 @@ export default function Form({ events, setEvents }) {
           value={formData.Name}
         />
       </label>
-      <label htmlFor="location">
+      <label htmlFor="Location">
         Location:
         <input
           id="Location"
@@ -74,7 +74,7 @@ export default function Form({ events, setEvents }) {
           value={formData.Location}
         />
       </label>
-      <label htmlFor="title">
+      <label htmlFor="EventTitle">
         Event Title:
         <input
           id="EventTitle"
@@ -83,7 +83,7 @@ export default function Form({ events, setEvents }) {
           value={formData.EventTitle}
         />
       </label>
-      <label htmlFor="dateAndTime">
+      <label htmlFor="DateTime">
         Date and Time:
         <input
           name="DateTime"
@@ -92,7 +92,7 @@ export default function Form({ events, setEvents }) {
           value={formData.DateTime}
         />
       </label>
-      <label htmlFor="duration">
+      <label htmlFor="Duration">
         Duration:
         <input
           id="Duration"
@@ -101,7 +101,7 @@ export default function Form({ events, setEvents }) {
           value={formData.Duration}
         />
       </label>
-      <label htmlFor="description">
+      <label htmlFor="Description">
         Description:
         <input
           id="Description"
@@ -111,7 +111,7 @@ export default function Form({ events, setEvents }) {
           value={formData.Description}
         />
       </label>
-      <label htmlFor="filterTags">
+      <label htmlFor="FilterTags">
         Tags:
         <select
           id="FilterTags"
@@ -126,7 +126,7 @@ export default function Form({ events, setEvents }) {
           <option value="other">Other</option>
         </select>
       </label>
-      <label htmlFor="pictureOptionUpload">
+      <label htmlFor="PictureOptionUpload">
         Picture:
         <input
           id="PictureOptionUpload"
@@ -134,10 +134,9 @@ export default function Form({ events, setEvents }) {
           type="file"
           accept="image/*"
           onChange={handleChange}
-          value={formData.PictureOptionUpload}
         />
       </label>
-      <label htmlFor="socialMediaLink">
+      <label htmlFor="SocialMediaLink">
         Socials:
         <input
           id="SocialMediaLink"
@@ -146,7 +145,7 @@ export default function Form({ events, setEvents }) {
           value={formData.SocialMediaLink}
         />
       </label>
-      <label htmlFor="ticketPrice">
+      <label htmlFor="TicketPrice">
         Price:
         <input
           id="TicketPrice"
@@ -158,7 +157,7 @@ export default function Form({ events, setEvents }) {
           value={formData.TicketPrice}
         />
       </label>
-      <label htmlFor="quantityTickets">
+      <label htmlFor="QuantityTickets">
         Quantity:
         <input
           id="QuantityTickets"
