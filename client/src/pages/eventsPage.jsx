@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Event from "../components/Event";
 import EventList from "../components/eventList";
 import Form from "../components/Form";
+import "./eventsPage.css";
 
 export default function EventsPage() {
   const [events, setEvents] = useState([]);
