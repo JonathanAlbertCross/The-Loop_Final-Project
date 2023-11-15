@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import EventList from "../components/eventList";
 import Form from "../components/Form";
-import "./eventsPage.css";
 
 export default function EventsPage() {
   const [events, setEvents] = useState([]);

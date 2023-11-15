@@ -1,5 +1,4 @@
 * {
-  background-color: #afd0bf;
   font-family: logo-font;
   margin: 0;
   padding: 0;
@@ -137,26 +136,22 @@ h3 {
   opacity: 70%;
   border: 3px solid #bd8b9c;
   box-shadow: 0px 0px 10px 3px #bd8b9c;
-  
- 
 }
 
 .vicky-photo {
   width: 25%;
   height: 25%;
   border-radius: 100%;
-
 }
 
 .jonathan-photo {
   width: 30%;
   height: 30%;
   border-radius: 50%;
-  
-  }
+}
 
-  .cailum-photo {
-    width: 30%;
-    height: 30%;
-    border-radius: 50%
-  }
+.cailum-photo {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+}
