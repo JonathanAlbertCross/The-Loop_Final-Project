@@ -126,7 +126,7 @@ export default function Form({ events, setEvents }) {
           <option value="other">Other</option>
         </select>
       </label>
-      <label htmlFor="PictureOptionUpload">
+      <label className="picture-label" htmlFor="PictureOptionUpload">
         Picture:
         <input
           id="PictureOptionUpload"
@@ -167,7 +167,7 @@ export default function Form({ events, setEvents }) {
           value={formData.QuantityTickets}
         />
       </label>
-      <button>Add Event</button>
+      <button className="add-event-button">Add Event</button>
     </form>
   );
 }

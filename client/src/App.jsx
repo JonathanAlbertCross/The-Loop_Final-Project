@@ -20,18 +20,14 @@ export default function App() {
   }
   return (
     <>
-      {isAuthenticated && (
-        <div>
-          <Profile />
-          <LoginButton />
-        </div>
-      )}
       <BrowserRouter>
-        <header>
+        <header
+          className={
+            isAuthenticated ? "authenticated-header" : "unauthenticated-header"
+          }
+        >
           <h1>
-            <Link to="/">
-              <span className="underline">The Loop</span>
-            </Link>
+            <Link to="/">The Loop</Link>
           </h1>
           <nav>
             <ul>
@@ -41,21 +37,28 @@ export default function App() {
               <li>
                 <Link to="/About">About</Link>
               </li>
+            </ul>
+            <ul>
               <li>
-                <LoginButton />
+                {isAuthenticated ? (
+                  <div className="profile-container">
+                    <Profile />
+                  </div>
+                ) : (
+                  <LoginButton />
+                )}
               </li>
             </ul>
           </nav>
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/Events" element={<EventsPage />}></Route>
-            <Route path="/About" element={<About />}></Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/Events" element={<EventsPage />} />
+            <Route path="/About" element={<About />} />
           </Routes>
         </main>
       </BrowserRouter>
-      );
     </>
   );
 }
