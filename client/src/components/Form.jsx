@@ -13,8 +13,8 @@ export default function Form({ events, setEvents }) {
     FilterTags: [""],
     PictureOptionUpload: "",
     SocialMediaLink: "",
-    TicketPrice: [],
-    QuantityTickets: [],
+    TicketPrice: 0,
+    QuantityTickets: 0,
   });
 
   function handleChange(event) {
@@ -48,8 +48,8 @@ export default function Form({ events, setEvents }) {
         <label htmlFor="organizerName">
           Your Name:
           <input
-            id=" OrganizerName"
-            name=" OrganizerName"
+            id="OrganizerName"
+            name="OrganizerName"
             type="text"
             onChange={handleChange}
             value={formData.OrganizerName}
@@ -67,8 +67,8 @@ export default function Form({ events, setEvents }) {
         <label htmlFor="location">
           Location:
           <input
-            id=" Location"
-            name=" Location"
+            id="Location"
+            name="Location"
             onChange={handleChange}
             value={formData.Location}
           />
@@ -76,8 +76,8 @@ export default function Form({ events, setEvents }) {
         <label htmlFor="title">
           Event Title:
           <input
-            id=" EventTitle"
-            name=" EventTitle"
+            id="EventTitle"
+            name="EventTitle"
             onChange={handleChange}
             value={formData.EventTitle}
           />

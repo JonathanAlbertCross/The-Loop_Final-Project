@@ -27,4 +27,8 @@ app.get("/events", async (request, response) => {
   response.json(event);
 });
 
+app.post("/events", async (request, response) => {
+  const event = new Event({});
+});
+
 app.listen(PORT, () => console.log(`App is running PORT ${PORT}`));
