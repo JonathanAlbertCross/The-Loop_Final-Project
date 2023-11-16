@@ -6,7 +6,6 @@ import EventsPage from "./pages/eventsPage";
 import About from "./pages/aboutPage";
 
 import LoginButton from "./components/LoginButton";
-import LogoutButton from "./components/LogoutButton";
 import Profile from "./components/Profile";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -18,6 +17,7 @@ export default function App() {
   if (isLoading) {
     return (
       <div className="simple-spinner">
+        {console.log("Loading")}
         <span></span>
       </div>
     );
