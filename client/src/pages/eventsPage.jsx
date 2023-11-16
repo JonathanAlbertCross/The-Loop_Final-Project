@@ -94,7 +94,7 @@ export default function EventsPage() {
 
   return (
     <>
-      <h2>Events List</h2>
+      <h2 className="events-list-title">Events List</h2>
 
       {/* Search Form */}
       <form>
@@ -164,7 +164,7 @@ export default function EventsPage() {
       />
 
       {/* Add Event Form */}
-      <Form setEvents={handleAddEvent} />
+      <Form setEvents={setEvents} />
     </>
   );
 }
