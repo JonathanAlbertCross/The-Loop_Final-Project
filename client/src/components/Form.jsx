@@ -12,34 +12,47 @@ export default function Form({ setEvents }) {
     Duration: "",
     Description: "",
     FilterTags: "",
-    PictureOptionUpload: null,
-    SocialMediaLink: "",
     TicketPrice: 0,
     QuantityTickets: 0,
   });
 
   function handleChange(event) {
     if (event.target.type === "checkbox") {
-      setFormData({ ...formData, [event.target.name]: event.target.checked });
+      setFormData({
+        ...formData,
+        [event.target.name]: event.target.checked || false,
+      });
     } else if (event.target.type === "file") {
-      setFormData({ ...formData, [event.target.name]: event.target.files[0] });
+      setFormData({
+        ...formData,
+        [event.target.name]: event.target.files[0] || null,
+      });
     } else {
-      setFormData({ ...formData, [event.target.name]: event.target.value });
+      setFormData({
+        ...formData,
+        [event.target.name]: event.target.value || "",
+      });
     }
   }
 
   async function addEvents(event) {
     event.preventDefault();
-    //const API = "http://localhost:8080/events";
-    const API = "https://the-loop.onrender.com";
-    const res = await axios.post(API, formData);
-    setEvents([...events, res.data]);
+    const API = "http://localhost:8080/events";
+    //const API = "https://the-loop.onrender.com";
+    try {
+      const res = await axios.post(API, formData);
+
+      // Update local state with the new event
+      setEvents((prevEvents) => [...prevEvents, res.data]);
+    } catch (error) {
+      console.error("Error adding event:", error);
+    }
   }
 
   async function updateEvent(event) {
     event.preventDefault();
-    // const API = "http://localhost:8080/events";
-    const API = "https://the-loop.onrender.com";
+    const API = "http://localhost:8080/events";
+    //const API = "https://the-loop.onrender.com";
     const res = await axios.post(API, formData);
     setEvents(formData);
   }
@@ -154,26 +167,6 @@ export default function Form({ setEvents }) {
           <label htmlFor="BAME">BAME</label>
         </div>
       </div>
-
-      <label htmlFor="PictureOptionUpload">
-        Picture:
-        <input
-          id="PictureOptionUpload"
-          name="PictureOptionUpload"
-          type="file"
-          accept="image/*"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="SocialMediaLink">
-        Socials:
-        <input
-          id="SocialMediaLink"
-          name="SocialMediaLink"
-          onChange={handleChange}
-          value={formData.SocialMediaLink}
-        />
-      </label>
       <label htmlFor="TicketPrice">
         Price:
         <input
