@@ -46,6 +46,7 @@ export default function Form({ setEvents }) {
 
   return (
     <form onSubmit={addEvents}>
+      <h1>Add Your Event</h1>
       <label htmlFor="OrganizerName">
         Your Name:
         <input

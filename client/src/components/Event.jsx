@@ -56,8 +56,13 @@ export default function Event({
       />
       <br></br>
       <button className="eventButton">Book</button>
-      <button onClick={onUpdate}>Update Event</button>
-      <button onClick={onDelete}>Delete Event</button>
+      <br />
+      <button className="eventButton2" onClick={onUpdate}>
+        Update
+      </button>
+      <button className="eventButton2" onClick={onDelete}>
+        Delete
+      </button>
     </article>
   );
 }
