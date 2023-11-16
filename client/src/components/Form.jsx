@@ -38,6 +38,9 @@ export default function Form({ setEvents }) {
   async function addEvents(event) {
     event.preventDefault();
     const API = "http://localhost:8080/events";
+    // const API = "https://the-loop.onrender.com";
+    const res = await axios.post(API, formData);
+    setEvents([...events, res.data]);
     //const API = "https://the-loop.onrender.com";
     try {
       const res = await axios.post(API, formData);
@@ -47,6 +50,7 @@ export default function Form({ setEvents }) {
     } catch (error) {
       console.error("Error adding event:", error);
     }
+
   }
 
   async function updateEvent(event) {
@@ -59,6 +63,7 @@ export default function Form({ setEvents }) {
 
   return (
     <form onSubmit={addEvents}>
+      <h1>Add Your Event</h1>
       <label htmlFor="OrganizerName">
         Your Name:
         <input

@@ -37,6 +37,15 @@ h3 {
   color: #555;
 }
 
+.eventButton2 {
+  margin: 20px 0px 0px 0px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #fcf5e5;
+  color: #555;
+  width: 75px;
+  font-size: 10px;
+}
+
 .no-events {
   text-align: center;
   margin-top: 20px;

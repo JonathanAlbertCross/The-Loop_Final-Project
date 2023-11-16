@@ -57,7 +57,8 @@ export default function Event({
         alt=""
       />
       <br></br>
-      <button>Book</button>
+
+      <button >Book</button>
       <button className="update-button" onClick={onUpdate}>
         Update Event
       </button>
