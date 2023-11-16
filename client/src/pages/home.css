@@ -21,7 +21,7 @@ img.social-media {
   height: 400px;
   position: relative;
   padding: 20px;
-  margin-left: 200px;
+  margin-left: 150px;
   margin-top: 70px;
 }
 
@@ -137,26 +137,22 @@ h3 {
   opacity: 70%;
   border: 3px solid #bd8b9c;
   box-shadow: 0px 0px 10px 3px #bd8b9c;
-  
- 
 }
 
 .vicky-photo {
   width: 25%;
   height: 25%;
   border-radius: 100%;
-
 }
 
 .jonathan-photo {
   width: 30%;
   height: 30%;
   border-radius: 50%;
-  
-  }
+}
 
-  .cailum-photo {
-    width: 30%;
-    height: 30%;
-    border-radius: 50%
-  }
+.cailum-photo {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+}

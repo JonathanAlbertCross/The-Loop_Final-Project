@@ -16,7 +16,11 @@ export default function App() {
   const { isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="simple-spinner">
+        <span></span>
+      </div>
+    );
   }
   return (
     <>
