@@ -13,6 +13,8 @@ export default function Event({
   SocialMediaLink,
   TicketPrice,
   QuantityTickets,
+  onUpdate,
+  onDelete,
 }) {
   return (
     <article className="eventCard">
@@ -54,6 +56,8 @@ export default function Event({
       />
       <br></br>
       <button className="eventButton">Book</button>
+      <button onClick={onUpdate}>Update Event</button>
+      <button onClick={onDelete}>Delete Event</button>
     </article>
   );
 }

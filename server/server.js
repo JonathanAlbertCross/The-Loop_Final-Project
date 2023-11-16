@@ -32,6 +32,20 @@ app.post("/events", async (request, response) => {
   response.json(newEvent);
 });
 
+app.put("/events/:id", async (request, response) => {
+  const { id } = request.params;
+  const updatedEvent = await Event.findByIdAndUpdate(id, request.body, {
+    new: true,
+  });
+  response.json(updatedEvent);
+});
+
+app.delete("/events/:id", async (request, response) => {
+  const { id } = request.params;
+  const deletedEvent = await Event.findByIdAndDelete(id);
+  response.json(deletedEvent);
+});
+
 app.listen(PORT, () => {
   console.log(`The app is running on port ${PORT}.`);
 });
