@@ -58,12 +58,13 @@ export default function Event({
       />
       <br></br>
 
-      <button >Book</button>
-      <button className="update-button" onClick={onUpdate}>
-        Update Event
+      <button className="eventButton">Book</button>
+      <br />
+      <button className="eventButton2" onClick={onUpdate}>
+        Update
       </button>
-      <button className="delete-button" onClick={onDelete}>
-        Delete Event
+      <button className="eventButton2" onClick={onDelete}>
+        Delete
       </button>
     </article>
   );
