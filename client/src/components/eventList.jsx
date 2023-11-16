@@ -1,6 +1,6 @@
 import React from "react";
 import Event from "./Event";
-import "./EventList.css";
+import "./eventList.css";
 
 export default function EventList({ events, onUpdate, onDelete }) {
   return events && events.length > 0 ? (
