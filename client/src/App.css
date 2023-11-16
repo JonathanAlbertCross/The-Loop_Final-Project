@@ -20,13 +20,14 @@ header {
   display: flex;
   justify-content: space-between;
   font-size: 3rem;
-  padding: 10px;
+  padding: 5px;
   max-width: 100%;
   overflow: hidden;
 }
 
 header.authenticated-header {
   display: flex;
+  max-height: 100px;
 }
 
 header > nav {
@@ -38,8 +39,7 @@ header > nav {
 
 header > h1 {
   font-size: 1.895rem;
-  margin-top: 10px;
-  margin-left: 50px;
+  margin-bottom: 50px;
 }
 .underline {
   text-decoration: none;
@@ -51,6 +51,8 @@ header > h1 {
 
 h1 {
   width: 300px;
+  margin-bottom: 30px;
+  padding: 0px;
 }
 h1 > a {
   text-decoration: none;
