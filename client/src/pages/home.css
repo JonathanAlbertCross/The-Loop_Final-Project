@@ -24,6 +24,23 @@ img.social-media {
   padding: 20px;
   margin-left: 150px;
   margin-top: 70px;
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 .profile {
@@ -90,7 +107,7 @@ h3 {
 }
 
 .home-section-3 {
-  height: 150vh;
+  height: 20vh;
   background-color: #e2efde;
   margin: 0;
 }
@@ -198,4 +215,34 @@ h3 {
 
 .redsvg {
   background-color: #afd0bf;
+}
+
+.computer-img {
+  height: 350px;
+  margin-top: 20px;
+}
+
+.meeting-img {
+  height: 350px;
+  margin-left: 80px;
+}
+
+.chart-img {
+  height: 400px;
+}
+
+.column:hover {
+  animation: rotateAndExpand 2s infinite;
+}
+
+@keyframes rotateAndExpand {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(15deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
 }

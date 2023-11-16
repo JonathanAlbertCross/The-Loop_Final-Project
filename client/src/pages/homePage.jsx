@@ -34,7 +34,13 @@ export default function Home() {
         </svg>
         <div className="container">
           <div className="row">
-            <div className="column"></div>
+            <div className="column">
+              <img
+                className="computer-img"
+                src="/imgs/computer.png"
+                alt="Computer Image"
+              />
+            </div>
             <div className="column-border">
               <p>
                 A study has shown the two biggest barriers for women in tech are
@@ -53,10 +59,22 @@ export default function Home() {
                 of heterosexual and cisgender employees.{" "}
               </p>
             </div>
-            <div className="column">4</div>
+            <div className="column">
+              <img
+                className="meeting-img"
+                src="/imgs/meeting.png"
+                alt="Meeting Image"
+              />
+            </div>
           </div>
           <div className="row">
-            <div className="column">5</div>
+            <div className="column">
+              <img
+                className="chart-img"
+                src="/imgs/chart.png"
+                alt="Chart Image"
+              />
+            </div>
             <div className="column-border">
               <p>
                 PwC have calculated that the BAME pay gap in 2020 was 9.2% and
