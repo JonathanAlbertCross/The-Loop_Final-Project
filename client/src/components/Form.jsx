@@ -146,12 +146,12 @@ export default function Form({ setEvents }) {
         <div>
           <input
             type="checkbox"
-            id="other"
-            name="other"
+            id="BAME"
+            name="BAME"
             onChange={handleChange}
-            checked={formData.other}
+            checked={formData.BAME}
           />
-          <label htmlFor="other">Other</label>
+          <label htmlFor="BAME">BAME</label>
         </div>
       </div>
 

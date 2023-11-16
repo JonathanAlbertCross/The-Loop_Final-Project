@@ -1,11 +1,12 @@
 * {
-  background-color: #afd0bf;
-  font-family: logo-font;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: logo-font;
+}
 @font-face {
   font-family: logo-font;
   src: url(/fonts/Agbalumo-Regular.ttf) format("truetype");

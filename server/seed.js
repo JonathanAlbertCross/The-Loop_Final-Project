@@ -61,7 +61,7 @@ async function seed() {
       Duration: "6 hours",
       Description:
         "A conference focused on promoting STEM education for all. Engage with experts, attend workshops, and explore exciting developments in science and technology.",
-      FilterTags: ["women", "LGBTQ+"],
+      FilterTags: ["women", " LGBTQ+"],
       PictureOptionUpload: "event_images/stem_for_all_conference.jpg",
       SocialMediaLink: "https://www.linkedin.com/in/michaelchen",
       TicketPrice: 25.0,
@@ -91,7 +91,7 @@ async function seed() {
       Duration: "2.5 hours",
       Description:
         "A workshop on promoting diversity and inclusion in the tech industry. Learn about best practices and strategies for building inclusive teams.",
-      FilterTags: ["women", "LGBTQ+"],
+      FilterTags: ["women", "LGBTQ+", "BAME"],
       PictureOptionUpload: "event_images/tech_inclusion_workshop.jpg",
       SocialMediaLink: "https://www.linkedin.com/in/ninapatel",
       TicketPrice: 15.0,
@@ -166,7 +166,7 @@ async function seed() {
       Duration: "24 hours",
       Description:
         "A hackathon focused on developing innovative solutions to address social and environmental challenges. Join us in using technology for positive change.",
-      FilterTags: ["LGBTQ+"],
+      FilterTags: ["LGBTQ+", "BAME"],
       PictureOptionUpload: "event_images/tech_for_good_hackathon.jpg",
       SocialMediaLink: "https://twitter.com/jasonpatel",
       TicketPrice: 0.0,
@@ -256,7 +256,7 @@ async function seed() {
       Duration: "2.5 hours",
       Description:
         "An evening of poetry and spoken word performances by artists from diverse backgrounds. Listen to the voices of the unheard.",
-      FilterTags: ["disabled"],
+      FilterTags: ["disabled", "BAME"],
       PictureOptionUpload: "event_images/diverse_voices_poetry_night.jpg",
       SocialMediaLink: "https://twitter.com/ethanwilson",
       TicketPrice: 15.0,
@@ -271,7 +271,7 @@ async function seed() {
       Duration: "6 hours",
       Description:
         "An expo featuring innovative technologies designed with inclusivity in mind. Explore the latest advancements in accessible tech.",
-      FilterTags: ["disabled"],
+      FilterTags: ["disabled", "BAME"],
       PictureOptionUpload: "event_images/inclusive_tech_expo.jpg",
       SocialMediaLink: "https://www.linkedin.com/in/ariajohnson",
       TicketPrice: 20.0,

@@ -1,7 +1,10 @@
+import React from "react";
 import Event from "./Event";
+import "./EventList.css";
 
 export default function EventList({ events, onUpdate, onDelete }) {
   return events && events.length > 0 ? (
+   <div className="event-list">
     events.map(
       ({
         _id,
@@ -40,7 +43,8 @@ export default function EventList({ events, onUpdate, onDelete }) {
         );
       }
     )
+   </div>
   ) : (
-    <p>{events ? "No events found." : "Loading events..."}</p>
+    <p className="no-events">{events ? "No events found." : "Loading events..."}</p>
   );
 }

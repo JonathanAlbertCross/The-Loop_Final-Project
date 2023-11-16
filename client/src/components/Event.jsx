@@ -1,3 +1,5 @@
+import "./eventList.css";
+
 export default function Event({
   OrganizerName,
   Name,
@@ -15,19 +17,45 @@ export default function Event({
   onDelete,
 }) {
   return (
-    <article>
-      <h2>{OrganizerName}</h2>
-      <h2>@ {Name}</h2>
-      <p>Location: {Location}</p>
-      <p>Event Title: {EventTitle}</p>
-      <p>Date and Time: {DateTime}</p>
-      <p>Duration: {Duration}</p>
-      <p>Description: {Description}</p>
-      <p>Tags: {FilterTags}</p>
-      <p>Picture: {PictureOptionUpload}</p>
-      <p>Social: {SocialMediaLink}</p>
-      <p>Price: {TicketPrice}</p>
-      <p>Quantity: {QuantityTickets}</p>
+    <article className="eventCard">
+      <h2>{Name}</h2>
+      <h3>{OrganizerName}</h3>
+      <p>
+        <strong>Location:</strong> {Location}
+      </p>
+      <p>
+        <strong>Event Title:</strong> {EventTitle}
+      </p>
+      <p>
+        <strong>Date and Time:</strong> {DateTime}
+      </p>
+      <p>
+        <strong>Duration:</strong> {Duration} Hours
+      </p>
+      <p>
+        <strong>Description:</strong> {Description}
+      </p>
+      <p>
+        <strong>Tags:</strong> {FilterTags}
+      </p>
+
+      <p>
+        <strong>Price:</strong> £{TicketPrice}
+      </p>
+      <p>
+        <strong>Quantity:</strong> {QuantityTickets} places
+      </p>
+
+      <img
+        src="https://static-00.iconduck.com/assets.00/linkedin-icon-2048x2048-ya5g47j2.png"
+        alt=""
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg"
+        alt=""
+      />
+      <br></br>
+      <button className="eventButton">Book</button>
       <button onClick={onUpdate}>Update Event</button>
       <button onClick={onDelete}>Delete Event</button>
     </article>
