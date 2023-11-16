@@ -2,9 +2,11 @@
   margin: 0 auto;
   padding: 0;
 }
+
 body {
   background-color: #afd0bf;
 }
+
 @font-face {
   font-family: logo-font;
   src: url(/fonts/Agbalumo-Regular.ttf) format("truetype");
