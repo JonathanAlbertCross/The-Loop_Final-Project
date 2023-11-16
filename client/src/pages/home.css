@@ -149,6 +149,7 @@ h3 {
   margin: 0 auto;
   padding: 20px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
@@ -161,22 +162,38 @@ h3 {
   box-shadow: 0px 0px 10px 3px #bd8b9c;
 }
 
-.vicky-photo {
-  width: 25%;
-  height: 25%;
+.theTeam {
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: column;
+  text-align: center;
+ 
+}
+
+.Vicky {
+
+  padding-bottom: 10%;
+}
+
+.Jonathan {
+
+  padding-bottom: 10%;
+}
+
+.Cailum {
+
+  padding-bottom: 10%
+}
+
+.photo {
+  
+  width: 50%;
+  height: 50%;
   border-radius: 100%;
-}
+  align-items: center;
+  padding-top: 10%;
+  
 
-.jonathan-photo {
-  width: 30%;
-  height: 30%;
-  border-radius: 50%;
-}
-
-.cailum-photo {
-  width: 30%;
-  height: 30%;
-  border-radius: 50%;
 }
 
 .redsvg {
