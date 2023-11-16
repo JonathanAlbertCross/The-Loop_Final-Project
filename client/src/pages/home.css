@@ -142,11 +142,10 @@ h3 {
 }
 
 .theTeam {
-  margin: auto;
-  justify-content: space-between;
-  padding-top: 10%;
-  padding-left: 25%;
-  padding-right: 10%;
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: column;
+  text-align: center;
  
 }
 
@@ -165,25 +164,15 @@ h3 {
   padding-bottom: 10%
 }
 
-.vicky-photo {
+.photo {
   
-  width: 40%;
-  height: 40%;
+  width: 50%;
+  height: 50%;
   border-radius: 100%;
   align-items: center;
+  padding-top: 10%;
+  
 
-}
-
-.jonathan-photo {
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
-}
-
-.cailum-photo {
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
 }
 
 .redsvg {
