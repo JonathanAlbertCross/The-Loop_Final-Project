@@ -35,15 +35,36 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="column"></div>
-            <div className="column">2</div>
+            <div className="column-border">
+              <p>
+                A study has shown the two biggest barriers for women in tech are
+                a lack of mentors (48%) and a lack of female role models (42%).
+                Having little support can have an impact on gender diversity in
+                tech as it can cause uncertainty for those who are interested in
+                entering the industry.
+              </p>
+            </div>
           </div>
           <div className="row">
-            <div className="column">3</div>
+            <div className="column-border">
+              <p>
+                40% of LGB+ and 55% of trans workers had experienced conflict in
+                the workplace in the preceding 12 months, compared to just 29%
+                of heterosexual and cisgender employees.{" "}
+              </p>
+            </div>
             <div className="column">4</div>
           </div>
           <div className="row">
             <div className="column">5</div>
-            <div className="column">6</div>
+            <div className="column-border">
+              <p>
+                PwC have calculated that the BAME pay gap in 2020 was 9.2% and
+                the BAME bonus gap was 36.9%. Although they claim that their pay
+                gap is driven by the fact there are more non BAME staff in
+                senior positions, these figures are still disappointing.
+              </p>
+            </div>
           </div>
         </div>
       </div>

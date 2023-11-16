@@ -112,16 +112,37 @@ h3 {
 
 .row {
   display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 120px;
 }
 
 .column {
-  background-color: #bd8b9c;
   padding: 1rem 0;
   flex: 1;
   text-align: center;
   height: 400px;
+  color: #e2efde;
+}
+
+.column-border {
+  padding: 1rem 0;
+  flex: 1;
+  text-align: center;
+  height: 400px;
+  color: #e2efde;
+  background-color: #afd0bf;
+  box-shadow: 0px 0px 10px 3px #3e4340;
+  border-radius: 20px;
+  margin-left: 75px;
+  overflow: hidden;
+  font-size: 1.95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-border p {
+  word-wrap: break-word;
+  padding: 10px;
 }
 
 .About-Us {
