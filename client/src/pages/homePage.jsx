@@ -16,12 +16,16 @@ export default function Home() {
         </div>
         <img
           className="social-media"
-          src="../public/imgs/social-media.png"
+          src="/imgs/social-media.png"
           alt="Diverse Social Media Circle"
         />
       </div>
       <div className="home-section-2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg
+          className="redsvg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+        >
           <path
             fill="#bd8b9c"
             fill-opacity="1"
