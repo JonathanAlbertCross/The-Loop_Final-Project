@@ -30,16 +30,16 @@ export default function Form({ setEvents }) {
 
   async function addEvents(event) {
     event.preventDefault();
-    const API = "http://localhost:8080/events";
-    // const API = "https://the-loop.onrender.com";
+    //const API = "http://localhost:8080/events";
+    const API = "https://the-loop.onrender.com";
     const res = await axios.post(API, formData);
     setEvents([...events, res.data]);
   }
 
   async function updateEvent(event) {
     event.preventDefault();
-    const API = "http://localhost:8080/events";
-    // const API = "https://the-loop.onrender.com";
+    // const API = "http://localhost:8080/events";
+    const API = "https://the-loop.onrender.com";
     const res = await axios.post(API, formData);
     setEvents(formData);
   }
