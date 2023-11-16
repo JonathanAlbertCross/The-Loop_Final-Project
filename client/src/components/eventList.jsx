@@ -1,8 +1,8 @@
 import Event from "./Event";
 
-export default function EventList({ event }) {
-  return event ? (
-    event.map(
+export default function EventList({ events, onUpdate, onDelete }) {
+  return events && events.length > 0 ? (
+    events.map(
       ({
         _id,
         OrganizerName,
@@ -20,6 +20,7 @@ export default function EventList({ event }) {
       }) => {
         return (
           <Event
+            key={_id}
             id={_id}
             OrganizerName={OrganizerName}
             Name={Name}
@@ -33,11 +34,13 @@ export default function EventList({ event }) {
             SocialMediaLink={SocialMediaLink}
             TicketPrice={TicketPrice}
             QuantityTickets={QuantityTickets}
+            onUpdate={() => onUpdate(_id)}
+            onDelete={() => onDelete(_id)}
           />
         );
       }
     )
   ) : (
-    <p>No events found.</p>
+    <p>{events ? "No events found." : "Loading events..."}</p>
   );
 }

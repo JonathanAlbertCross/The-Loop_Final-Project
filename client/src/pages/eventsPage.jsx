@@ -35,13 +35,62 @@ export default function EventsPage() {
 
     setFilterTags((prevFilterTags) => {
       if (prevFilterTags.includes(tag)) {
-        // Remove the tag if it's already in the array
+        // remove tag if it's already in the array
         return prevFilterTags.filter((prevTag) => prevTag !== tag);
       } else {
-        // Add the tag if it's not in the array
+        // add tag if it's not in the array
         return [...prevFilterTags, tag];
       }
     });
+  };
+
+  const handleUpdate = async (eventId) => {
+    const updatedEvent = {
+      OrganizerName: "",
+      Name: "",
+      Location: "",
+      EventTitle: "",
+      DateTime: "",
+      Duration: "",
+      Description: "",
+      FilterTags: "",
+      PictureOptionUpload: null,
+      SocialMediaLink: "",
+      TicketPrice: "",
+      QuantityTickets: "",
+    };
+
+    const API = `http://localhost:8080/events/${eventId}`;
+
+    try {
+      await axios.put(API, updatedEvent);
+      getEvents();
+    } catch (error) {
+      console.error("Error updating event:", error);
+    }
+  };
+
+  const handleDelete = async (eventId) => {
+    const API = `http://localhost:8080/events/${eventId}`;
+
+    try {
+      await axios.delete(API);
+      // Fetch the updated list of events after successful deletion
+      getEvents();
+    } catch (error) {
+      console.error("Error deleting event:", error);
+    }
+  };
+
+  const handleAddEvent = async (formData) => {
+    const API = "http://localhost:8080/events";
+
+    try {
+      const res = await axios.post(API, formData);
+      setEvents([...events, res.data]);
+    } catch (error) {
+      console.error("Error adding event:", error);
+    }
   };
 
   return (
@@ -109,10 +158,14 @@ export default function EventsPage() {
       </form>
 
       {/* Display Filtered Events */}
-      <EventList event={filteredEvents} />
+      <EventList
+        events={filteredEvents || []}
+        onUpdate={handleUpdate}
+        onDelete={handleDelete}
+      />
 
       {/* Add Event Form */}
-      <Form events={events} setEvents={setEvents} />
+      <Form setEvents={handleAddEvent} />
     </>
   );
 }

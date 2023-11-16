@@ -11,6 +11,8 @@ export default function Event({
   SocialMediaLink,
   TicketPrice,
   QuantityTickets,
+  onUpdate,
+  onDelete,
 }) {
   return (
     <article>
@@ -26,6 +28,8 @@ export default function Event({
       <p>Social: {SocialMediaLink}</p>
       <p>Price: {TicketPrice}</p>
       <p>Quantity: {QuantityTickets}</p>
+      <button onClick={onUpdate}>Update Event</button>
+      <button onClick={onDelete}>Delete Event</button>
     </article>
   );
 }
