@@ -30,7 +30,7 @@ export default function Event({
         <strong>Date and Time:</strong> {DateTime}
       </p>
       <p>
-        <strong>Duration:</strong> {Duration} Hours
+        <strong>Duration:</strong> {Duration}
       </p>
       <p>
         <strong>Description:</strong> {Description}
@@ -47,17 +47,23 @@ export default function Event({
       </p>
 
       <img
+        className="media-img"
         src="https://static-00.iconduck.com/assets.00/linkedin-icon-2048x2048-ya5g47j2.png"
         alt=""
       />
       <img
+        className="media-img"
         src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg"
         alt=""
       />
       <br></br>
-      <button className="eventButton">Book</button>
-      <button onClick={onUpdate}>Update Event</button>
-      <button onClick={onDelete}>Delete Event</button>
+      <button>Book</button>
+      <button className="update-button" onClick={onUpdate}>
+        Update Event
+      </button>
+      <button className="delete-button" onClick={onDelete}>
+        Delete Event
+      </button>
     </article>
   );
 }
