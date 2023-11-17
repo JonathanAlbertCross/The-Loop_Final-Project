@@ -35,9 +35,11 @@ export default function App() {
           </h1>
           <nav>
             <ul>
-              <li>
-                <Link to="/Events">Events</Link>
-              </li>
+              {isAuthenticated && (
+                <li>
+                  <Link to="/Events">Events</Link>
+                </li>
+              )}
               <li>
                 <Link to="/About">About</Link>
               </li>
@@ -55,6 +57,7 @@ export default function App() {
             </ul>
           </nav>
         </header>
+
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

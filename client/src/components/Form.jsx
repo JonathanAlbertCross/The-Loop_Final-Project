@@ -39,9 +39,6 @@ export default function Form({ setEvents }) {
     event.preventDefault();
     const API = "https://the-loop.onrender.com/events";
     // const API = "https://the-loop.onrender.com";
-    const res = await axios.post(API, formData);
-    setEvents([...events, res.data]);
-    //const API = "https://the-loop.onrender.com";
     try {
       const res = await axios.post(API, formData);
 
