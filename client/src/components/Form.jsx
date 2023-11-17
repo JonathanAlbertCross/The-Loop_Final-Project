@@ -37,7 +37,7 @@ export default function Form({ setEvents }) {
 
   async function addEvents(event) {
     event.preventDefault();
-    const API = "http://localhost:8080/events";
+    const API = "https://the-loop.onrender.com/events";
     // const API = "https://the-loop.onrender.com";
     const res = await axios.post(API, formData);
     setEvents([...events, res.data]);
@@ -50,12 +50,11 @@ export default function Form({ setEvents }) {
     } catch (error) {
       console.error("Error adding event:", error);
     }
-
   }
 
   async function updateEvent(event) {
     event.preventDefault();
-    const API = "http://localhost:8080/events";
+    const API = "https://the-loop.onrender.com/events";
     //const API = "https://the-loop.onrender.com";
     const res = await axios.post(API, formData);
     setEvents(formData);

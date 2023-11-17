@@ -9,7 +9,7 @@ export default function EventsPage() {
   const [filterTags, setFilterTags] = useState([]);
 
   async function getEvents() {
-    const API = "http://localhost:8080/events";
+    const API = "https://the-loop.onrender.com/events";
     const res = await axios.get(API);
     setEvents(res.data);
   }
@@ -59,7 +59,7 @@ export default function EventsPage() {
       QuantityTickets: "",
     };
 
-    const API = `http://localhost:8080/events/${eventId}`;
+    const API = `https://the-loop.onrender.com/events/${eventId}`;
 
     try {
       await axios.put(API, updatedEvent);
@@ -70,7 +70,7 @@ export default function EventsPage() {
   };
 
   const handleDelete = async (eventId) => {
-    const API = `http://localhost:8080/events/${eventId}`;
+    const API = `https://the-loop.onrender.com/events/${eventId}`;
 
     try {
       await axios.delete(API);
@@ -82,7 +82,7 @@ export default function EventsPage() {
   };
 
   const handleAddEvent = async (formData) => {
-    const API = "http://localhost:8080/events";
+    const API = "https://the-loop.onrender.com/events";
 
     try {
       const res = await axios.post(API, formData);
